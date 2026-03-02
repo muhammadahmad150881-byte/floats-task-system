@@ -1,0 +1,362 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #2c2c2c;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background-color: #1f2937 !important;
+}
+
+/* Menu button */
+#menuBtn {
+  border-color: #9ca3af;
+  color: #e5e7eb;
+}
+
+#menuBtn:hover {
+  background-color: #374151;
+  border-color: #374151;
+}
+
+/* =========================
+   DASHBOARD HEADER
+========================= */
+#dashboardHeader {
+  background-color: #1f2937;
+  padding: 14px 24px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#dashboardTitle {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* =========================
+   ADMIN SIDEBAR (RIGHT)
+========================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.12);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar h5 {
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   MAIN MENU BUTTONS
+========================= */
+.menu-btn {
+  width: 100%;
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #1f2937;
+  padding-left: 18px;
+}
+
+/* =========================
+   MENU GROUP & SUBMENU
+========================= */
+.menu-group {
+  margin-bottom: 8px;
+}
+
+.menu-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-parent .arrow {
+  font-size: 12px;
+}
+
+/* Submenu (nested under menu) */
+.submenu {
+  display: none;
+  margin-top: 6px;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 2px solid #e5e7eb;
+}
+
+.submenu-btn {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.submenu-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #1f2937;
+}
+
+/* =========================
+   STAFF MENU (RIGHT DROPDOWN)
+========================= */
+.staff-menu {
+  position: fixed;
+  top: 56px; /* below navbar */
+  right: 16px;
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  display: none;
+  z-index: 1200;
+}
+
+/* =========================
+   CONTENT PANEL (FORMS)
+========================= */
+.content-panel {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 24px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+}
+.table th,
+.table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+}
+
+.table {
+  width: 100%;
+}
+.table-hover tbody tr:hover {
+  background-color: #f1f5ff;
+}
+/* =========================
+   SUFP INFO GRID STYLE
+========================= */
+
+.sufp-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.info-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.info-box label {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-box div {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Highlight for budgets */
+.highlight-box {
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  border: 1px solid #c7d2fe;
+}
+.invoice-table-wrapper {
+    width: 100%;
+    overflow-x: auto;   /* horizontal scroll */
+    overflow-y: auto;   /* vertical scroll */
+    max-height: 75vh;   /* vertical limit */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+#invoiceTable {
+    min-width: 1600px;   /* force wide table */
+    border-collapse: collapse;
+}
+
+/* Better table layout control */
+#invoiceTable {
+    min-width: 1400px;
+    border-collapse: collapse;
+    table-layout: fixed; /* important */
+}
+
+/* Default cell style */
+#invoiceTable th,
+#invoiceTable td {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#invoiceTable input,
+#invoiceTable select {
+    width: 100%;
+    min-height: 38px;
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#invoiceTable th:nth-child(6),
+#invoiceTable td:nth-child(6) {
+    min-width: 180px;   /* Service User */
+}
+
+#invoiceTable th:nth-child(13),
+#invoiceTable td:nth-child(13) {
+    min-width: 250px;   /* Comments */
+}
+
+#invoiceTable th:nth-child(7),
+#invoiceTable td:nth-child(7) {
+    min-width: 120px;   /* Reference */
+}
+#invoiceTable thead th {
+    position: sticky;
+    top: 0;
+    background: #1f2937;
+    color: white;
+    z-index: 2;
+}
+/* Sr */
+#invoiceTable th:nth-child(1),
+#invoiceTable td:nth-child(1) {
+    width: 60px;
+    text-align: center;
+}
+
+/* SUID */
+#invoiceTable th:nth-child(2),
+#invoiceTable td:nth-child(2) {
+    width: 90px;
+}
+
+/* Type */
+#invoiceTable th:nth-child(4),
+#invoiceTable td:nth-child(4) {
+    width: 100px;
+}
+/* =========================
+   INVOICE TABLE - COMPACT EXCEL STYLE
+========================= */
+
+#invoiceTable {
+  table-layout: fixed;
+  font-size: 12px;
+}
+
+#invoiceTable th {
+  padding: 6px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+#invoiceTable td {
+  padding: 4px 6px;
+  vertical-align: middle;
+}
+
+/* Compact inputs */
+#invoiceTable input,
+#invoiceTable select {
+  height: 28px;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+/* Small column widths */
+#invoiceTable th:nth-child(1),
+#invoiceTable td:nth-child(1) { width: 50px; }   /* Sr */
+
+#invoiceTable th:nth-child(2),
+#invoiceTable td:nth-child(2) { width: 90px; }   /* SUID */
+
+#invoiceTable th:nth-child(3),
+#invoiceTable td:nth-child(3) { width: 140px; }  /* Service User */
+
+#invoiceTable th:nth-child(4),
+#invoiceTable td:nth-child(4) { width: 110px; }  /* Council */
+
+#invoiceTable th:nth-child(5),
+#invoiceTable td:nth-child(5) { width: 110px; }  /* Type */
+
+#invoiceTable th:nth-child(10),
+#invoiceTable td:nth-child(10) { width: 100px; } /* Status */
+
+/* Reduce overall row height */
+#invoiceTable tr {
+  height: 34px;
+}
+#invoiceTable th {
+  background-color: #1f2937;
+  font-weight: 600;
+}
+
+#invoiceTable td {
+  border: 1px solid #e5e7eb;
+}
